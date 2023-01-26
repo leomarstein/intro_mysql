@@ -1,0 +1,101 @@
+EXERCICIO 
+PARTE 1
+
+CREATE DATABASE leomar_stein_2023_roteiro_pratico_1;
+
+PARTE 2
+USE leomar_stein_2023_roteiro_pratico_1;
+
+CREATE TABLE clientes(
+	id INTEGER PRIMARY KEY,
+	nome VARCHAR(50),
+    email VARCHAR(50),
+    idade INTEGER
+);
+
+
+PARTE 3
+
+INSERT INTO clientes(id,nome,email,idade)VALUES(0001,"joão","joaoneto@gmail.com",18);
+INSERT INTO clientes(id,nome,email,idade)VALUES(0002,"jhon","jhonneto@gmail.com",19);
+INSERT INTO clientes(id,nome,email,idade)VALUES
+(0003,"pedro neto","pedroneto@gmail.com",18);
+INSERT INTO clientes(id,nome,email,idade)VALUES
+(0004,"pedro alves","pedro alves@gmail.com",17);
+INSERT INTO clientes(id,nome,email,idade)VALUES
+(0005,"paulo pedro","paulo pedro@gmail.com",20);
+INSERT INTO clientes(id,nome,email,idade)VALUES
+(0006,"paulo antonio","paulo antonio@gmail.com",20);
+INSERT INTO clientes(id,nome,email,idade)VALUES(0007,"roberta","roberta@gmail.com",20);
+INSERT INTO clientes(id,nome,email,idade)VALUES(0008,"joana","joana@gmail.com",18);
+INSERT INTO clientes(id,nome,email,idade)VALUES(0009,"fabia","fabia@gmail.com",17);
+INSERT INTO clientes(id,nome,email,idade)VALUES(0010,"joaquim","joaquim@gmail.com",20);
+INSERT INTO clientes(id,nome,email,idade)VALUES(0011,"leo","leo@gmail.com",19);
+INSERT INTO clientes(id,nome,email,idade)VALUES(0012,"paula","paula@gmail.com",20);
+INSERT INTO clientes(id,nome,email,idade)VALUES(0013,"maria","maria@gmail.com",17);
+INSERT INTO clientes(id,nome,email,idade)VALUES
+(0014,"joaquim neto","joaquim neto@gmail.com",18);
+INSERT INTO clientes(id,nome,email,idade)VALUES(0015,"fabio","fabio@gmail.com",20);
+INSERT INTO clientes(id,nome,email,idade)VALUES(0016,"marta","marta@gmail.com",20);
+INSERT INTO clientes(id,nome,email,idade)VALUES(0017,"renata","renata@gmail.com",20);
+INSERT INTO clientes(id,nome,email,idade)VALUES(0018,"debora","debora@gmail.com",19);
+INSERT INTO clientes(id,nome,email,idade)VALUES(0019,"valeria","valeria@gmail.com",20);
+INSERT INTO clientes(id,nome,email,idade)VALUES(0020,"vinicius","vinicius@gmail.com",20);
+
+PARTE 4
+SELECT * FROM nome clientes;
+
+PARTE 5
+UPDATE clientes SET nome = "jhon", email ="ppjhon@gmail.com" WHERE id = 2;
+
+PARTE 6
+DELETE FROM clientes WHERE id = 3;
+
+=================||==============================||=====================
+
+
+CREATE TABLE clientes(
+	id INTEGER NOT NULL PRIMARY KEY,
+	nome VARCHAR(50) NOT NULL,
+	email VARCHAR(50),
+                 idade INTEGER
+);
+CREATE TABLE veiculos(
+	id INTEGER NOT NULL PRIMARY KEY,
+	placa VARCHAR(11) NOT NULL,
+	ano INTEGER
+);
+
+INSERT INTO veiculos(id,placa,ano) VELUES (1,"PPK2555",2022);
+INSERT INTO veiculos(id,placa,ano) VELUES (2,"PPK5877",2022);
+INSERT INTO veiculos(id,placa,ano) VELUES (3,"AAB5542",2022);
+INSERT INTO veiculos(id,placa,ano) VELUES (4,"ABD5578",2022);
+INSERT INTO veiculos(id,placa,ano) VELUES (5,"PPJ4588",2022);
+
+
+INSERT INTO clientes(id,placa,ano,id_clientes) VALUE(1,"PPK2132",2022,5);
+
+SELECT * FROM nome clientes;
+
+SELECT * FROM nome veiculos;
+
+INSERT INTO clientes(id,nome,email,idade)VALUES(1,"pedrinho","pedrinho@gmail.com",20);
+INSERT INTO clientes(id,nome,email,idade)VALUES(2,"jhon","jhonneto@gmail.com",25);
+INSERT INTO clientes(id,nome,email,idade)VALUES
+(3,"pedro neto","pedroneto@gmail.com",30);
+INSERT INTO clientes(id,nome,email,idade)VALUES(4,"fabia","fabia@gmail.com",27);
+INSERT INTO clientes(id,nome,email,idade)VALUES(5,"maria","maria@gmail.com",21);
+
+UPDATE clientes SET placa = "PPK2555" WHERE id = 2;
+
+UPDATE veiculos SET id_cliente = 4 WHERE id = 1;
+
+ update sempre DEPOIS de ALTER
+
+ALTER TABLE veiculos ADD cor VARCHAR(10);
+
+ALTER TABLE veiculos ADD cor = branca WHERE id = 1;
+
+UPDATE veiculos SET cor = "verde" WHERE id = 5;
+
+DELETE FROM clientes WHERE id = 2;
